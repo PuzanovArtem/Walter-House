@@ -1,0 +1,15 @@
+$s-mobile: 374px;
+$mobile: 575px;
+$tablet: 767px;
+$l-tablet: 1023px;
+$lap-top: 1219px;
+$desktop: 1499px;
+
+@mixin respond-to($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+///////приклад використання
+/// @include respond-to($xxl-LapTop) { }

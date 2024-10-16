@@ -1,0 +1,21 @@
+$font-family-base: 'Open Sans', sans-serif;
+$font-family-second: 'Roboto', sans-serif;
+$font-weight-base: 400;
+$font-size-base: 14px;
+
+// colors
+$text: red;
+$white: #ffff;
+// box-shadow
+
+// line-gradient
+
+// Минимальная ширина страницы
+$min-midth: 320px;
+// Ширина полотна (макета)
+$max-width: 1366px;
+// Ширина ограничивающего контейнера (0 = нет ограничения)
+$max-width-container: 1200px;
+// Общий отступ у контейнера
+// (300= по 150px слева и справа, 0 = нет отступа)
+$container-padding: 150;
