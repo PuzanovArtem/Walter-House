@@ -1,11 +1,19 @@
 $font-family-base: 'Open Sans', sans-serif;
-$font-family-second: 'Roboto', sans-serif;
-$font-weight-base: 400;
-$font-size-base: 14px;
+$font-family-roboto: 'Roboto', sans-serif;
+$font-weight-base: 600;
+$font-size-base: 16px;
 
 // colors
-$text: red;
-$white: #ffff;
+
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --yellow-gold-color: #ffad30;
+  --light-gray-color: #c4c4c4;
+  --gray-color: #6e6e6e;
+  --dark-gray-color: #333;
+  --error-color: #ff4242;
+}
 // box-shadow
 
 // line-gradient

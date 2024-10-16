@@ -8,8 +8,8 @@ html {
   font-family: $font-family-base;
   font-size: $font-size-base;
   font-weight: $font-weight-base;
-  color: $text;
-  background: $white;
+  color: var(--black-color);
+  background: var(--white-color);
   user-select: none;
 }
 
