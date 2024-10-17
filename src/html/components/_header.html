@@ -1,3 +1,143 @@
-<header>
-    <h1>My name is Handlebars </h1>
+<header class="header">
+  <div class="container">
+    <div class="container-header">
+      <div class="header__wrapper">
+        <a href="./" class="header__logo-link">
+          <img src="/public/assets/images/icons/logo.svg" alt="logo" class="header__logo" width="68" height="54">
+        </a>
+
+        <ul class="header__list">
+          <li class="header__item">
+            <button id="openHeaderModalBtn" type="button" data-modal-target="headerModal" class="burger-icon"
+              aria-label="menu">
+              <img src="/public/assets/images/icons/menu-btn.svg" alt="burger" class="header__burger" width="30"
+                height="16">
+            </button>
+            <a href="tel:380971234567" class="header__number header-font">+38 (097) 123 45 67</a>
+          </li>
+
+          <li class="header__item">
+            <p class="header__request" data-modal-target="orderCall">request for a call</p>
+            <div class="header__phone" data-modal-target="orderCall">
+              <div class="header__phone-wrapper">
+                <svg class="icon icon--phone">
+                  <use xlink:href="/assets/sprites/sprite.svg#phone"></use>
+                </svg>
+
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="headerModal" class="header-modal main-popUp">
+      <div class="header-modal__content">
+        <ul class="header-modal__list">
+          <li class="header-modal__item header-modal__item-s">
+            <span class="close"></span>
+            <a href="#">styles of rennovation</a>
+            <a href="#" class="header-modal__arrow-link">
+
+              <svg class="icon header-modal__arrow">
+                <use xlink:href="/assets/sprites/sprite.svg#arrow"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="header-modal__item header-modal__item-special">
+            <a href="#">Costs</a>
+            <a href="#" class="header-modal__arrow-link">
+              <svg class="icon header-modal__arrow">
+                <use xlink:href="/assets/sprites/sprite.svg#arrow"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="header-modal__item">
+            <a href="#">
+              <p class="header-modal__link">5 steps to WALTER HOUSE</p>
+            </a>
+            <a href="#" class="header-modal__arrow-link">
+              <svg class="icon header-modal__arrow">
+                <use xlink:href="/assets/sprites/sprite.svg#arrow"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="header-modal__item header-modal__item-s">
+            <a href="#">
+              <p class="header-modal__link-s">additional services</p>
+            </a>
+            <a href="#" class="header-modal__arrow-link">
+              <svg class="icon header-modal__arrow">
+                <use xlink:href="/assets/sprites/sprite.svg#arrow"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="header-modal__item header-modal__item-special">
+            <a href="#">BLOG</a>
+            <a href="#" class="header-modal__arrow-link">
+              <svg class="icon header-modal__arrow">
+                <use xlink:href="/assets/sprites/sprite.svg#arrow"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <div class="header-modal__info">
+          <div class="header-modal__info-wrapper">
+            <img src="/public/assets/images/icons/logo.svg" class="header-modal__info-logo" alt="logo" width="88"
+              height="56" style="width: 88px; height: 56px;">
+            <p class="header-modal__info-text header-font">
+              turnkey construction of houses
+            </p>
+            <a href="#screenShot1" class="header-modal__info-arrow-link">
+              <svg class="icon header-modal__info-arrow">
+                <use xlink:href="/assets/sprites/sprite.svg#arrow-longer"></use>
+              </svg>
+
+            </a>
+          </div>
+
+          <ul class="header-modal__info-list">
+            <li class="header-modal__info-item">
+              <svg class="icon icon--map-pin">
+                <use xlink:href="/assets/sprites/sprite.svg#map-pin"></use>
+              </svg>
+
+              <a href="#" class="header-modal__info-item-text">Kiev, st. Getman Street 101</a>
+            </li>
+
+            <li class="header-modal__info-item">
+              <svg class="icon icon--click">
+                <use xlink:href="/assets/sprites/sprite.svg#click"></use>
+              </svg>
+
+              <p class="header-modal__info-item-text">
+                Mon-Fri: 9:00 - 19:00, Sat: 10:00 - 17:00
+              </p>
+            </li>
+
+            <li class="header-modal__info-item">
+              <svg class="icon icon--email">
+                <use xlink:href="/assets/sprites/sprite.svg#email"></use>
+              </svg>
+
+              <a href="mailto:info@dhs.com" class="header-modal__info-item-text">info@dhs.com</a>
+            </li>
+
+            <li class="header-modal__info-item">
+              <svg class="icon icon--phote-info">
+                <use xlink:href="/assets/sprites/sprite.svg#phone-info"></use>
+              </svg>
+              <a href="tel:380971234567" class="header-modal__info-item-text">+38 (097) 123 45 67</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </header>

@@ -1,0 +1,31 @@
+<svg class="icon icon--menu-btn">
+  <use xlink:href="/assets/sprites/sprite.svg#menu-btn"></use>
+</svg>
+
+<svg class="icon icon--phone">
+  <use xlink:href="/assets/sprites/sprite.svg#phone"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="/assets/sprites/sprite.svg#click"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="/assets/sprites/sprite.svg#email"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="/assets/sprites/sprite.svg#map-pin"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="/assets/sprites/sprite.svg#phone-info"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="/assets/sprites/sprite.svg#arrow-longer"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="/assets/sprites/sprite.svg#arrow"></use>
+</svg>

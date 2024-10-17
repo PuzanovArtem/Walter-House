@@ -1,4 +1,234 @@
-.header__title{
-    font-size: 35px ;
-    color: red;
+.icon {
+  &--phone {
+    width: 13px;
+    height: 13px;
+    fill: var(--white-color);
+  }
+}
+
+.container-header {
+  max-width: 1706px;
+  margin-left: 2.5%;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @include respond-to($xl-LapTop) {
+    margin: 0 auto;
+    padding-left: 9px;
+  }
+
+  @include respond-to($l-mobile) {
+    padding-left: 2px;
+  }
+}
+
+.header {
+  position: fixed;
+  z-index: 6;
+  width: 100%;
+
+  &__wrapper {
+    position: relative;
+    align-items: center;
+    z-index: 6;
+    display: flex;
+    margin-top: 35px;
+  }
+
+  &__logo {
+    width: 68px;
+    height: 54px;
+    margin-right: 45px;
+  }
+
+  &__list {
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-grow: 1;
+  }
+
+  &__list::after {
+    content: '';
+    opacity: 0.4;
+    position: absolute;
+    top: 69px;
+    z-index: 2;
+    width: 100%;
+    height: 1px;
+    background: var(--white-color);
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__burger {
+    width: 30px;
+    height: 16px;
+    margin-right: 127px;
+  }
+
+  &__number {
+    font-size: 16px;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+  }
+
+  &__number:hover {
+    color: var(--yellow-gold-color);
+  }
+
+  &__request {
+    cursor: pointer;
+    margin-right: 74px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: var(--yellow-gold-color);
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+
+  &__request:hover {
+    color: var(--white-color);
+  }
+
+  &__phone {
+    position: relative;
+    margin-right: 60px;
+    animation: phoneAnimation 0.2s infinite;
+
+    &::before {
+      content: '';
+      opacity: 0.2;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 80px;
+      height: 80px;
+      border: 1px solid var(--white-color);
+      border-radius: 50%;
+      transform: translate(40%, -40%);
+      //   animation: circleAnimation 1.5s alternate;
+    }
+
+    &::after {
+      content: '';
+      opacity: 0.4;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60px;
+      height: 60px;
+      border: 1px solid var(--white-color);
+      border-radius: 50%;
+      transform: translate(38%, -38%);
+      //   animation: circleAnimation 1.5s alternate;
+    }
+  }
+
+  &__phone-wrapper {
+    position: relative;
+
+    &::after {
+      content: '';
+      opacity: 0.2;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--white-color);
+      transform: translate(33%, -33%);
+    }
+  }
+
+  @include respond-to($xl-LapTop) {
+    &__list::after {
+      display: none;
+    }
+
+    &::after {
+      content: '';
+      opacity: 0.4;
+      position: absolute;
+      top: 100px;
+      z-index: 3;
+      width: 100%;
+      height: 1px;
+      background: var(--white-color);
+    }
+  }
+
+  @include respond-to($desktop) {
+    &__number {
+      display: none;
+    }
+
+    &__wrapper {
+      margin-top: 22px;
+    }
+
+    &__logo {
+      margin-right: 42px;
+    }
+
+    &__phone {
+      margin-right: 40px;
+    }
+  }
+
+  @include respond-to($xl-tablet) {
+    position: absolute;
+    top: 0;
+  }
+
+  @include respond-to($l-mobile) {
+    &__request {
+      display: none;
+    }
+
+    &__wrapper {
+      margin-top: 13px;
+    }
+
+    &__burger {
+      margin-right: 0;
+    }
+
+    &__logo {
+      margin-right: 19px;
+    }
+
+    &__phone {
+      margin-right: 30px;
+
+      &::before {
+        width: 60px;
+        height: 60px;
+        transform: translate(37%, -37%);
+      }
+
+      &::after {
+        width: 45px;
+        height: 45px;
+        transform: translate(34%, -34%);
+      }
+    }
+
+    &__phone-wrapper {
+      &::after {
+        width: 30px;
+        height: 30px;
+        transform: translate(27%, -27%);
+      }
+    }
+
+    &::after {
+      top: 79px;
+    }
+  }
 }

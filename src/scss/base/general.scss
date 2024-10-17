@@ -8,7 +8,7 @@ html {
   font-family: $font-family-base;
   font-size: $font-size-base;
   font-weight: $font-weight-base;
-  color: var(--black-color);
+  color: var(--white-color);
   background: var(--white-color);
   user-select: none;
 }
@@ -16,20 +16,10 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 body.no-scroll {
   overflow: hidden;
-}
-
-.main {
-  flex: 1;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
 }
 
 .container {
