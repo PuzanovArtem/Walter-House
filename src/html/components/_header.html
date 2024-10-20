@@ -10,14 +10,17 @@
           <li class="header__item">
             <button id="openHeaderModalBtn" type="button" data-modal-target="headerModal" class="burger-icon"
               aria-label="menu">
+
               <img src="/public/assets/images/icons/menu-btn.svg" alt="burger" class="header__burger" width="30"
                 height="16">
             </button>
+
             <a href="tel:380971234567" class="header__number header-font">+38 (097) 123 45 67</a>
           </li>
 
           <li class="header__item">
             <p class="header__request" data-modal-target="orderCall">request for a call</p>
+
             <div class="header__phone" data-modal-target="orderCall">
               <div class="header__phone-wrapper">
                 <svg class="icon icon--phone">
@@ -36,9 +39,10 @@
         <ul class="header-modal__list">
           <li class="header-modal__item header-modal__item-s">
             <span class="close"></span>
-            <a href="#">styles of rennovation</a>
-            <a href="#" class="header-modal__arrow-link">
 
+            <a href="#">styles of rennovation</a>
+
+            <a href="#" class="header-modal__arrow-link">
               <svg class="icon header-modal__arrow">
                 <use xlink:href="/assets/sprites/sprite.svg#arrow"></use>
               </svg>
@@ -47,6 +51,7 @@
 
           <li class="header-modal__item header-modal__item-special">
             <a href="#">Costs</a>
+
             <a href="#" class="header-modal__arrow-link">
               <svg class="icon header-modal__arrow">
                 <use xlink:href="/assets/sprites/sprite.svg#arrow"></use>
@@ -58,6 +63,7 @@
             <a href="#">
               <p class="header-modal__link">5 steps to WALTER HOUSE</p>
             </a>
+
             <a href="#" class="header-modal__arrow-link">
               <svg class="icon header-modal__arrow">
                 <use xlink:href="/assets/sprites/sprite.svg#arrow"></use>
@@ -69,6 +75,7 @@
             <a href="#">
               <p class="header-modal__link-s">additional services</p>
             </a>
+
             <a href="#" class="header-modal__arrow-link">
               <svg class="icon header-modal__arrow">
                 <use xlink:href="/assets/sprites/sprite.svg#arrow"></use>
@@ -78,6 +85,7 @@
 
           <li class="header-modal__item header-modal__item-special">
             <a href="#">BLOG</a>
+
             <a href="#" class="header-modal__arrow-link">
               <svg class="icon header-modal__arrow">
                 <use xlink:href="/assets/sprites/sprite.svg#arrow"></use>
@@ -89,15 +97,16 @@
         <div class="header-modal__info">
           <div class="header-modal__info-wrapper">
             <img src="/public/assets/images/icons/logo.svg" class="header-modal__info-logo" alt="logo" width="88"
-              height="56" style="width: 88px; height: 56px;">
+              height="56">
+
             <p class="header-modal__info-text header-font">
               turnkey construction of houses
             </p>
+
             <a href="#screenShot1" class="header-modal__info-arrow-link">
               <svg class="icon header-modal__info-arrow">
                 <use xlink:href="/assets/sprites/sprite.svg#arrow-longer"></use>
               </svg>
-
             </a>
           </div>
 
@@ -132,6 +141,7 @@
               <svg class="icon icon--phote-info">
                 <use xlink:href="/assets/sprites/sprite.svg#phone-info"></use>
               </svg>
+
               <a href="tel:380971234567" class="header-modal__info-item-text">+38 (097) 123 45 67</a>
             </li>
           </ul>
@@ -139,5 +149,47 @@
       </div>
     </div>
 
+    <div id="orderCall" class="header-modal main-popUp ">
+      <div class="header-modal__content order-call__content">
+
+        <form class="contact-form order-call__contact-form">
+          <div class="slide-one__input-wrapper order-call__input-wrapper">
+            <input type="text" name="name" class=" order-call__input" placeholder="Ваше имя">
+
+            <div class="validation-text-denger"></div>
+          </div>
+
+          <div class="slide-one__input-wrapper order-call__input-wrapper">
+            <input type="tel" name="phone" class="order-call__input" placeholder="Ваш телефон">
+            <div class="validation-text-denger"></div>
+          </div>
+
+          <div class="slide-one__btn-wrapper">
+            <button class="form-btn openModalBtn" data-modal-target="thanksPage" type="button">
+              <span>заказать звонок</span>
+
+              <img src="/public/assets/images/icons/arrow.svg" alt="arrow" width="135" height="21">
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="thanksPage" class="header-modal main-popUp ">
+      <div class="header-modal__content order-call__content thanks-page__content">
+
+        <h2 class="thanks-page__title">Спасибо за вашу заявку!</h2>
+
+        <p class="thanks-page__text">Наш менеджер свяжеться с вами в ближайшее время.</p>
+
+        <div class="slide-one-form__btn-wrapper">
+          <button type="submit" class="form-btn " id="goBackBtn">
+            <span>вернуться на главную</span>
+
+            <img src="/public/assets/images/icons/arrow.svg" alt="arrow" width="135" height="21">
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </header>

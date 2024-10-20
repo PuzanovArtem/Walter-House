@@ -1,3 +1,9 @@
-import '/src/js/modules/popup'
+// import '/src/js/modules/popup'
+import { contactFormValidator } from '/src/js/libs/validator'
+import { setupModals } from '/src/js/modules/popup'
 
-console.log('main')
+
+document.addEventListener('DOMContentLoaded', function () {
+  setupModals()
+  contactFormValidator()
+})

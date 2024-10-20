@@ -1,12 +1,8 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const modals = document.querySelectorAll('.main-popUp')
+export function setupModals() {
   const modalButtons = document.querySelectorAll('.openModalBtn')
   const closeButtons = document.querySelectorAll('.close')
-  const orderModal = document.getElementById('orderCall')
-  const headerPhone = document.querySelector('.header__phone')
   const links = document.querySelectorAll('.point')
 
-  // Function to open a modal window
   function openModal(modal) {
     if (modal) {
       modal.style.display = 'block'
@@ -18,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Function to close a modal window
   function closeModal(modal) {
     if (modal) {
       modal.style.display = 'none'
@@ -30,14 +25,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Add click event handler to close the modal window when clicking outside of it
   window.addEventListener('click', event => {
     if (event.target.classList.contains('main-popUp')) {
       closeModal(event.target)
     }
   })
 
-  // Add keydown event handler for the Escape key to close the modal window
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape') {
       const openModals = document.querySelectorAll(".main-popUp[style='display: block;']")
@@ -47,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   })
 
-  // Add click event handler for the burger icon
   const burgerIcon = document.querySelector('.burger-icon')
   const menuModal = document.getElementById('headerModal')
 
@@ -80,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   })
 
-  // Additional event handlers for existing modal windows (if needed)
   modalButtons.forEach(button => {
     button.addEventListener('click', () => {
       const targetModalId = button.getAttribute('data-modal-target')
@@ -95,4 +86,4 @@ document.addEventListener('DOMContentLoaded', function () {
       closeModal(modal)
     })
   })
-})
+}

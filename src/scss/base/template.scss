@@ -2,3 +2,24 @@
   width: 24px;
   height: 24px;
 }
+
+.validation-text-denger {
+  font-size: 12px;
+  color: red;
+}
+
+.form-btn {
+  @extend %display-jc-sb;
+  width: 100%;
+  margin-top: 30px;
+  font-size: 20px;
+  letter-spacing: 8px;
+  font-weight: 600;
+  color: var(--yellow-gold-color);
+  text-transform: uppercase;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateX(10px);
+  }
+}
