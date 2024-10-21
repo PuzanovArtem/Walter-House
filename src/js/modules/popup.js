@@ -26,14 +26,14 @@ export function setupModals() {
   }
 
   window.addEventListener('click', event => {
-    if (event.target.classList.contains('main-popUp')) {
+    if (event.target.classList.contains('main-popup')) {
       closeModal(event.target)
     }
   })
 
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape') {
-      const openModals = document.querySelectorAll(".main-popUp[style='display: block;']")
+      const openModals = document.querySelectorAll(".main-popup[style='display: block;']")
       openModals.forEach(openModal => {
         closeModal(openModal)
       })
@@ -82,7 +82,7 @@ export function setupModals() {
 
   closeButtons.forEach(closeButton => {
     closeButton.addEventListener('click', () => {
-      const modal = closeButton.closest('.main-popUp')
+      const modal = closeButton.closest('.main-popup')
       closeModal(modal)
     })
   })

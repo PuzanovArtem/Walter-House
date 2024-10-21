@@ -3,7 +3,7 @@
   height: 24px;
 }
 
-.validation-text-denger {
+.validation-text-danger {
   font-size: 12px;
   color: red;
 }
@@ -21,5 +21,26 @@
 
   &:hover {
     transform: translateX(10px);
+  }
+
+  @include respond-to($xl-LapTop) {
+    margin-top: 10px;
+    font-size: 1.2vw;
+  }
+
+  @include respond-to($xl-tablet) {
+    align-items: center;
+    margin-top: 30px;
+    font-size: 20px;
+  }
+
+  @include respond-to($m-tablet) {
+    font-size: 13px;
+    letter-spacing: 6px;
+  }
+
+  @include respond-to($s-mobile) {
+    margin-top: 18px;
+    letter-spacing: 3px;
   }
 }

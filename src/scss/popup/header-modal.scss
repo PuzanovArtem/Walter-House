@@ -47,6 +47,7 @@
     width: 312px;
     margin: 0 auto;
     padding-bottom: 50px;
+    text-align: center;
 
     a {
       font-size: 30px;
@@ -172,13 +173,14 @@
   }
 
   &__info {
+    // position: fixed;
+    // bottom: 0;
+    // width: 100%;
     max-width: 1564px;
     margin-top: 20px;
     padding: 54px 60px 42px 54px;
     color: #000;
     background-color: var(--white-color);
-    // display: flex;
-    // align-items: end;
   }
 
   &__info-wrapper {
@@ -284,6 +286,7 @@
 
     &__list {
       display: block;
+      text-align: center;
     }
 
     &__content {
@@ -330,6 +333,8 @@
     }
 
     &__item:hover {
+      color: var(-yellow-gold-color);
+
       .header-modal {
         background-color: rgba(0, 0, 0, 0.2);
       }
@@ -338,7 +343,6 @@
         opacity: 0;
         display: none;
       }
-      color: var(-yellow-gold-color);
     }
   }
 
