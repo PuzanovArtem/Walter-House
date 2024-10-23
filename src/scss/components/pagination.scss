@@ -1,0 +1,85 @@
+.pagination {
+  position: fixed;
+  top: 35%;
+  right: 5%;
+  z-index: 5;
+  transform: translateX(-50%);
+
+  @include respond-to($xl-tablet) {
+    display: none;
+  }
+}
+
+.pagination .point {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 7px;
+  border-radius: 50%;
+}
+
+.point.disabled {
+  /* Змінює колір тексту */
+  cursor: not-allowed;
+  pointer-events: none;
+  /* Вимикає можливість натискання */
+  color: grey;
+  /* Змінює курсор при наведенні */
+  text-decoration: none;
+  /* Прибирає підкреслення */
+}
+
+.pagination .point::after {
+  content: '';
+  opacity: 0.3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--white-color);
+  transform: translate(-50%, -50%);
+}
+
+.point-active {
+  opacity: 1;
+  position: relative;
+}
+
+.point-active::after {
+  opacity: 1 !important;
+  background: var(--yellow-gold-color) !important;
+}
+
+.point-active::before {
+  content: '';
+  opacity: 0.3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  border: 1px solid var(--white-color);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+#fullpage {
+  height: 100vh !important;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.fp-watermark{
+  display: none !important;
+}
