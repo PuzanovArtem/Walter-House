@@ -4,7 +4,7 @@
   }
 
   &__inner {
-    position: relative;
+    @extend %position-rel;
     z-index: 3;
     margin-left: 16.5%;
   }

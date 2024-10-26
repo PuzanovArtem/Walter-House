@@ -1,8 +1,9 @@
 .slide-two {
   &__inner {
-    top: 19%;
+    // top: 19%;
     left: 11.5%;
-    height: 90vh;
+    margin: 153px 0 0;
+    // height: 90vh;
     margin-left: 0;
     padding-bottom: 0;
   }
@@ -23,15 +24,15 @@
     margin-top: 5.8vw;
 
     li {
-      position: relative;
+      @extend %position-rel;
       width: 520px;
       text-align: center;
     }
   }
 
   &__item:not(:last-child)::after {
+    @extend %position-abs;
     content: '';
-    position: absolute;
     top: -30%;
     right: 0;
     width: 2px;
@@ -61,10 +62,9 @@
   }
 
   &__btn {
-    align-items: center;
-    display: flex;
+    @extend %display-flex;
     max-width: 430px;
-    margin-top: 23vw;
+    margin-top: 21.5vw;
     margin-left: 11.5vw;
     font-size: 14px;
     line-height: 19px;
@@ -82,6 +82,4 @@
   &__btn:hover {
     transform: translateX(10px);
   }
-
-
 }

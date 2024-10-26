@@ -1,5 +1,5 @@
 .pagination {
-  position: fixed;
+  @extend %position-abs;
   top: 35%;
   right: 5%;
   z-index: 5;
@@ -11,8 +11,8 @@
 }
 
 .pagination .point {
+  @extend %position-rel;
   cursor: pointer;
-  position: relative;
   display: block;
   width: 30px;
   height: 30px;
@@ -23,14 +23,14 @@
 .point.disabled {
   cursor: not-allowed;
   pointer-events: none;
-  color: grey;
+  color: var(--gray-color);
   text-decoration: none;
 }
 
 .pagination .point::after {
+  @extend %position-abs;
   content: '';
   opacity: 0.3;
-  position: absolute;
   top: 50%;
   left: 50%;
   width: 7px;
@@ -41,8 +41,8 @@
 }
 
 .point-active {
+  @extend %position-rel;
   opacity: 1;
-  position: relative;
 }
 
 .point-active::after {
@@ -51,9 +51,9 @@
 }
 
 .point-active::before {
+  @extend %position-abs;
   content: '';
   opacity: 0.3;
-  position: absolute;
   top: 50%;
   left: 50%;
   width: 25px;
@@ -76,8 +76,6 @@
 
   @include respond-to($xl-tablet) {
     height: auto !important;
-
-    
   }
 }
 

@@ -41,3 +41,8 @@
   //  @extend %position-abs;
   position: absolute;
 }
+
+%position-fix {
+  //  @extend %position-abs;
+  position: fixed;
+}

@@ -14,7 +14,7 @@
 
   @include respond-to($xl-LapTop) {
     margin: 0 auto;
-    padding-left: 0px;
+    padding-left: 0;
   }
 
   @include respond-to($l-mobile) {
