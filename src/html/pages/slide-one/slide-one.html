@@ -1,4 +1,4 @@
-<sectiom class="section slide-one" data-anchor="screenShot1">
+<sectiom class="section slide-one slide" data-anchor="screenShot1">
 	<picture>
 		<source media="(min-width: 920px)" srcset="/public/assets/images/slide-one/first-screen-bg.webp"
 			type="image/webp">
@@ -15,9 +15,22 @@
 		<source media="(min-width: 200px)" srcset="/public/assets/images/slide-one/first-screen-bg-320.jpg"
 			type="image/jpeg">
 
-		<img src="/public/assets/images/slide-one/first-screen-bg.jpg" class="slide-one__bg" alt="bg" width="1920"
+		<img src="/public/assets/images/slide-one/first-screen-bg.jpg" class="slide__bg" alt="bg" width="1920"
 			height="1080">
 	</picture>
-	<div class="slide-one__bg-overlay"></div>
+	<div class="slide__bg-overlay"></div>
 
+	<div class="container slide-one__container">
+		<div class="slide-one__inner">
+			<div class="slide-one__inner-content">
+				<h1 class="slide-one__title title">walter</h1>
+				<p class="slide-one__subtitle header-font">your personal</p>
+				<h2 class="slide-one__title slide-one__title--s title">
+					House
+				</h2>
+			</div>
+		</div>
+	</div>
+
+	{{> contact-form}}
 </sectiom>

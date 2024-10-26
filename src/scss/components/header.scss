@@ -8,13 +8,13 @@
 
 .container-header {
   max-width: 1706px;
-  margin-left: 2.5%;
+  margin-left: 2%;
   padding-right: 15px;
   padding-left: 15px;
 
   @include respond-to($xl-LapTop) {
     margin: 0 auto;
-    padding-left: 9px;
+    padding-left: 0px;
   }
 
   @include respond-to($l-mobile) {
@@ -67,7 +67,7 @@
   &__burger {
     width: 30px;
     height: 16px;
-    margin-right: 127px;
+    margin-right: 124px;
   }
 
   &__number {
@@ -97,7 +97,7 @@
 
   &__phone {
     @extend %position-rel;
-    margin-right: 60px;
+    margin-right: 66px;
 
     &::before {
       @extend %position-abs;
@@ -174,7 +174,7 @@
     }
 
     &__phone {
-      margin-right: 40px;
+      margin-right: 18px;
     }
   }
 

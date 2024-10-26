@@ -29,3 +29,19 @@
 <svg class="icon">
   <use xlink:href="/assets/sprites/sprite.svg#arrow"></use>
 </svg>
+
+<svg class="icon icon-youtube">
+  <use xlink:href="/assets/sprites/sprite.svg#youtube"></use>
+</svg>
+
+<svg class="icon icon--telegram">
+  <use xlink:href="/assets/sprites/sprite.svg#telegram"></use>
+</svg>
+
+<svg class="icon icon--instagram">
+  <use xlink:href="/assets/sprites/sprite.svg#instagram"></use>
+</svg>
+
+<svg class="icon icon--facebook">
+  <use xlink:href="/assets/sprites/sprite.svg#facebook"></use>
+</svg>

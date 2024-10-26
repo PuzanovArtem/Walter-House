@@ -68,11 +68,11 @@
     }
   }
 
-  &__item-special {
+  &__item--special {
     padding-top: 20px;
   }
 
-  &__item-s {
+  &__item--s {
     padding-top: 10px;
   }
 
@@ -282,6 +282,7 @@
 
     &__info-wrapper::after {
       top: 129px;
+      left: 0;
     }
 
     &__list {
@@ -318,7 +319,7 @@
       padding-bottom: 40px;
     }
 
-    &__item-s {
+    &__item--s {
       padding-top: 40px;
     }
 

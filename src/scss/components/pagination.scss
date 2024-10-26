@@ -21,14 +21,10 @@
 }
 
 .point.disabled {
-  /* Змінює колір тексту */
   cursor: not-allowed;
   pointer-events: none;
-  /* Вимикає можливість натискання */
   color: grey;
-  /* Змінює курсор при наведенні */
   text-decoration: none;
-  /* Прибирає підкреслення */
 }
 
 .pagination .point::after {
@@ -67,19 +63,40 @@
   transform: translate(-50%, -50%);
 }
 
-
 #fullpage {
   height: 100vh !important;
 }
 
 .section {
-  height: 100vh;
+  align-items: start;
+  justify-content: start;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100vh;
   font-size: 2rem;
+
+  @include respond-to($xl-tablet) {
+    height: auto !important;
+
+    
+  }
 }
 
-.fp-watermark{
+.fp-watermark {
   display: none !important;
+}
+
+@include respond-to($xl-tablet) {
+  .fp-is-overflow .fp-overflow.fp-auto-height-responsive,
+  .fp-is-overflow .fp-overflow.fp-auto-height,
+  .fp-is-overflow > .fp-overflow {
+    overflow-y: visible !important;
+  }
+
+  .fp-scrollable.fp-responsive .fp-is-overflow.fp-section:not(.fp-auto-height, [data-percentage]),
+  .fp-scrollable .fp-section:not(.fp-auto-height, [data-percentage]),
+  .fp-scrollable .fp-slide:not(.fp-auto-height, [data-percentage]) {
+    min-height: auto !important;
+    /* min-height: 100vh; */
+    /* min-height: calc(var(--vh, 1vh)* 100); */
+  }
 }

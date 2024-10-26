@@ -1,0 +1,81 @@
+.left-panel {
+  &__inner {
+    @extend %position-rel;
+    position: fixed;
+    top: 495px;
+    left: 80px;
+    z-index: 6;
+  }
+
+  &__text {
+    @extend %position-rel;
+    opacity: 0.5;
+    align-items: end;
+    display: flex;
+    font-size: 11px;
+    letter-spacing: 8.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transform: rotate(-90deg);
+    transform-origin: left top;
+  }
+
+  &__text::before {
+    @extend %position-abs;
+    content: '';
+    top: 6px;
+    left: -230px;
+    width: 154px;
+    height: 1px;
+    background: var(--white-color);
+  }
+
+  &__list {
+    @extend %position-abs;
+    top: 303px;
+  }
+
+  &__item {
+    margin-bottom: 31px;
+  }
+
+  &__social {
+    opacity: 0.5;
+    fill: var(--white-color);
+
+    &:hover {
+      filter: brightness(0) saturate(100%) invert(71%) sepia(79%) saturate(623%) hue-rotate(333deg) brightness(101%)
+        contrast(102%);
+    }
+  }
+
+  @include respond-to($xl-LapTop) {
+    &__inner {
+      top: 50%;
+      left: 34px;
+    }
+
+    &__text {
+      font-size: 0.5vw;
+      letter-spacing: 8px;
+    }
+
+    &__text::before {
+      left: -70%;
+      width: 10vw;
+    }
+
+    &__list {
+      top: 0;
+      margin-top: 80%;
+    }
+
+    &__item {
+      margin-bottom: 1.5vw;
+    }
+  }
+
+  @include respond-to($xl-tablet) {
+    display: none;
+  }
+}

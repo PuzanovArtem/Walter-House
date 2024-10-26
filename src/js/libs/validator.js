@@ -1,22 +1,18 @@
 import validator from 'validator'
 
-export const contactFormValidator = () => {
-  // Получаем элементы формы
+export const orderCallValidator = () => {
   const form = document.querySelector('.contact-form')
   const inputName = form.querySelector('input[name="name"]')
   const inputPhone = form.querySelector('input[name="phone"]')
   const nameErrorElement = form.querySelectorAll('.validation-text-danger')[0]
   const phoneErrorElement = form.querySelectorAll('.validation-text-danger')[1]
 
-  // Кнопка для отправки формы
   const submitButton = form.querySelector('.form-btn')
 
-  // Обработчик клика по кнопке отправки
   submitButton.addEventListener('click', function (e) {
-    e.preventDefault() // Остановка стандартного поведения кнопки
+    e.preventDefault()
     let isValid = true
 
-    // Валидация имени
     const nameValue = inputName.value.trim()
     if (validator.isEmpty(nameValue)) {
       nameErrorElement.textContent = 'Имя не может быть пустым.'
@@ -28,7 +24,6 @@ export const contactFormValidator = () => {
       nameErrorElement.textContent = ''
     }
 
-    // Валидация номера телефона
     const phoneValue = inputPhone.value.trim()
     if (validator.isEmpty(phoneValue)) {
       phoneErrorElement.textContent = 'Номер телефона не может быть пустым.'
@@ -40,11 +35,44 @@ export const contactFormValidator = () => {
       phoneErrorElement.textContent = ''
     }
 
-    // Если валидация пройдена
     if (isValid) {
       alert('Форма отправлена успешно!')
 
-      // Очистка полей формы
+      inputName.value = ''
+      inputPhone.value = ''
+    }
+  })
+}
+
+export const contactFormValidator = () => {
+  const form = document.querySelector('.contact-form--discuss')
+  const inputName = form.querySelector('input[name="name"]')
+  const inputPhone = form.querySelector('input[name="phone"]')
+  const nameErrorElement = form.querySelectorAll('.validation-text-danger')[0]
+  const phoneErrorElement = form.querySelectorAll('.validation-text-danger')[1]
+
+  const submitButton = form.querySelector('.form-btn')
+
+  submitButton.addEventListener('click', e => {
+    e.preventDefault()
+    let isValid = true
+
+    if (inputName.value.trim() === '') {
+      nameErrorElement.textContent = 'Введите имя'
+      isValid = false
+    } else {
+      nameErrorElement.textContent = ''
+    }
+
+    if (inputPhone.value.trim() === '') {
+      phoneErrorElement.textContent = 'Введите номер телефона'
+      isValid = false
+    } else {
+      phoneErrorElement.textContent = ''
+    }
+
+    if (isValid) {
+      console.log('Форма успешно отправлена')
       inputName.value = ''
       inputPhone.value = ''
     }
