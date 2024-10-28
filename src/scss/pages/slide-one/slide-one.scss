@@ -1,4 +1,6 @@
 .slide-one {
+  justify-content: start !important;
+
   &__container {
     width: 1020px;
   }
@@ -6,7 +8,8 @@
   &__inner {
     @extend %position-rel;
     z-index: 3;
-    margin-left: 16.5%;
+    margin-top: 37%;
+    margin-left: 30.5%;
   }
 
   &__title {
@@ -33,84 +36,102 @@
   }
 
   @include respond-to($xl-LapTop) {
-    &__title {
-      font-size: 5vw;
+    .slide-one {
+      &__title {
+        font-size: 5vw;
+      }
+
+      &__title--s {
+        margin-left: 12vw;
+      }
     }
   }
 
   @include respond-to($m-desktop) {
-    &__inner {
-      margin-left: 12.5%;
+    .slide-one {
+      &__inner {
+        margin-left: 12.5%;
+      }
     }
   }
 
   @include respond-to($xl-tablet) {
-    &__title {
-      font-size: 12.5vw;
-    }
+    .slide-one {
+      &__title {
+        font-size: 12.5vw;
+      }
 
-    &__container {
-      width: 100%;
-    }
+      &__container {
+        width: 100%;
+      }
 
-    &__inner {
-      top: 0;
-      display: block;
-      margin-top: 36%;
-      margin-left: 5%;
-      padding-bottom: 140px;
-    }
+      &__inner {
+        top: 0;
+        display: block;
+        margin-top: 36%;
+        margin-left: 5%;
+        padding-bottom: 140px;
+      }
 
-    &__title--s {
-      margin-left: 24vw;
+      &__title--s {
+        margin-left: 24vw;
+      }
     }
   }
 
-  @include respond-to($m-tablet) {
-    &__inner {
-      margin-top: 40%;
-      margin-left: 2%;
-      padding-bottom: 50px;
-    }
+  // @include respond-to($m-tablet) {
+  //   .slide-one {
+  //     &__inner {
+  //       margin-top: 40%;
+  //       margin-left: 2%;
+  //       padding-bottom: 50px;
+  //     }
 
-    &__title {
-      font-size: 10vw;
-    }
+  //     &__title {
+  //       font-size: 10vw;
+  //     }
 
-    &__title--s {
-      margin-left: 27vw;
-    }
+  //     &__title--s {
+  //       margin-left: 27vw;
+  //     }
 
-    &__subtitle {
-      font-size: 8px;
-      letter-spacing: 6px;
-    }
-  }
+  //     &__subtitle {
+  //       font-size: 8px;
+  //       letter-spacing: 6px;
+  //     }
+  //   }
+  // }
 
   @include respond-to($s-tablet) {
-    &__inner {
-      margin-top: 48%;
-      padding-bottom: 60px;
+    .slide-one {
+      &__inner {
+        margin-top: 48%;
+        padding-bottom: 30px;
+      }
     }
   }
 
   @include respond-to($m-mobile) {
-    &__inner {
-      margin-top: 45%;
-      padding-bottom: 100px;
+    .slide-one {
+      &__inner {
+        margin-top: 45%;
+        padding-bottom: 100px;
+      }
     }
   }
 
   @include respond-to($s-mobile) {
-    &__title {
-      font-size: 14vw;
-      line-height: 50px;
-    }
+    .slide-one {
+      &__title {
+        font-size: 14vw;
+        line-height: 50px;
+      }
 
-    &__inner {
-      margin-top: 63%;
-      margin-left: 2%;
-      padding-bottom: 180px;
+      &__inner {
+        margin-top: 65%;
+        margin-left: 0%;
+        padding-bottom: 175px;
+      }
     }
   }
 }

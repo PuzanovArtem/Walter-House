@@ -61,7 +61,7 @@
 
   @include respond-to($m-tablet) {
     &__contact-form {
-      padding: 40px 10px 50px 30px;
+      padding: 33px 41px 55px 42px;
     }
 
     &__input {
@@ -78,7 +78,7 @@
   @include respond-to($s-mobile) {
     &__input {
       margin-bottom: 7px;
-      padding: 14px 10px 12px 0;
+      padding: 14px 10px 8px 0;
     }
   }
 }
