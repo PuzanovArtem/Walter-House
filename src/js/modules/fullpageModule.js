@@ -2,37 +2,45 @@ import fullpage from 'fullpage.js'
 import 'fullpage.js/dist/fullpage.css'
 
 export function initFullPage() {
+  let isPopupOpen = false; // Флаг для отслеживания состояния попапа
+
   function toggleFullPageScrolling() {
-    if (window.innerWidth <= 920) {
-      // Отключаем авто-скроллинг для экранов меньше 920px
-      fullpage_api.setAutoScrolling(false)
-      fullpage_api.setFitToSection(false) // Отключаем подгонку секций по размеру экрана
-      fullpage_api.setAllowScrolling(true) // Включаем стандартный скроллинг
+    if (window.innerWidth <= 920 || isPopupOpen) { // Если ширина окна <= 920 или попап открыт
+      fullpage_api.setAutoScrolling(false); // Отключаем автоматическую прокрутку
+      fullpage_api.setFitToSection(false); // Отключаем подгонку к секции
+      fullpage_api.setAllowScrolling(true); // Разрешаем прокрутку вручную
     } else {
-      // Включаем авто-скроллинг для экранов больше 920px
-      fullpage_api.setAutoScrolling(true)
-      fullpage_api.setFitToSection(true) // Включаем подгонку секций по размеру экрана
-      fullpage_api.setAllowScrolling(true) // Оставляем скроллинг по секциям
+      fullpage_api.setAutoScrolling(true); // Включаем автоматическую прокрутку
+      fullpage_api.setFitToSection(true); // Включаем подгонку к секции
+      fullpage_api.setAllowScrolling(true); // Разрешаем прокрутку вручную
     }
   }
 
-  // Инициализация fullPage.js
   new fullpage('#fullpage', {
-    autoScrolling: true, // Включаем авто-скроллинг по умолчанию
-    anchors: ['screenShot1', 'screenShot2', 'screenShot3', 'screenShot4', 'screenShot5', 'screenShot6'],
-    navigation: false, // Используем свою навигацию
-    controlArrows: false, // Скрываем стрелки
+    autoScrolling: true, // Включаем автоматическую прокрутку
+    anchors: ['screenShot1', 'screenShot2', 'screenShot3', 'screenShot4', 'screenShot5', 'screenShot6'], // Анкеры для секций
+    navigation: false, // Отключаем навигацию
+    controlArrows: false, // Отключаем стрелки управления
     afterLoad: function (origin, destination, direction) {
       document.querySelectorAll('.pagination .point').forEach(point => {
-        point.classList.remove('point-active')
-      })
-      document.querySelector(`.pagination a[href="#${destination.anchor}"]`).classList.add('point-active')
+        point.classList.remove('point-active'); // Удаляем активный класс у всех точек пагинации
+      });
+      document.querySelector(`.pagination a[href="#${destination.anchor}"]`).classList.add('point-active'); // Добавляем активный класс к текущей точке пагинации
     },
-  })
+  });
 
-  // Проверка при загрузке страницы
-  toggleFullPageScrolling()
+  toggleFullPageScrolling(); // Проверяем и устанавливаем параметры прокрутки при загрузке
 
-  // Обработчик изменения размера окна
-  window.addEventListener('resize', toggleFullPageScrolling)
+  window.addEventListener('resize', toggleFullPageScrolling); // Проверяем и устанавливаем параметры прокрутки при изменении размера окна
+
+  // Добавляем слушатели для изменения состояния попапа
+  document.addEventListener('popupOpen', () => {
+    isPopupOpen = true; // Устанавливаем флаг, что попап открыт
+    toggleFullPageScrolling(); // Проверяем и устанавливаем параметры прокрутки
+  });
+
+  document.addEventListener('popupClose', () => {
+    isPopupOpen = false; // Устанавливаем флаг, что попап закрыт
+    toggleFullPageScrolling(); // Проверяем и устанавливаем параметры прокрутки
+  });
 }

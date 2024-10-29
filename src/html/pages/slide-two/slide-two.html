@@ -15,13 +15,13 @@
 		<source media="(min-width: 200px)" srcset="/public/assets/images/slide-two/second-screen-bg-mob.jpg"
 			type="image/jpeg">
 
-		<img src="/public/assets/images/slide-one/first-screen-bg.jpg" class="slide__bg" alt="bg" width="1920"
-			height="1080">
+		<img src="/public/assets/images/slide-one/first-screen-bg.jpg" class="slide__bg slide-two__bg" alt="bg"
+			width="1920" height="1080">
 	</picture>
 
 	<div class="slide__bg-overlay"></div>
 
-	<!-- <div class="slide-one__inner slide-two__inner">
+	<div class="slide-one__inner slide-two__inner">
 		<h3 class="slide-two__subtitle header-font">
 			elite renovation of your apartment
 		</h3>
@@ -43,13 +43,17 @@
 			</li>
 		</ul>
 
-		<button class="slide-two__btn openModalBtn" data-modal-target="aboutUsModal" type="button">
+		<button class="slide-two__btn openModalBtn" data-modal-target="aboutUsModal" data-slide="2" type="button">
 			<span>more info about us</span>
 
 			<img src="/public/assets/images/icons/arrow.svg" alt="arrow" width="115" height="21" loading="lazy">
 		</button>
-	</div> -->
+
+		<!-- <button class="openModalBtn" data-modal-target="popup1" data-slide="3">Open Popup on Slide 3</button> -->
+	</div>
 
 	{{> contact-form aditionalClass='slide-two__form'}}
+
+	{{>about-popup}}
 
 </sectiom>

@@ -82,8 +82,110 @@
   &__btn:hover {
     transform: translateX(10px);
   }
+
+  @include respond-to($xl-LapTop) {
+    &__btn {
+      margin-top: 11vw;
+      margin-left: 15vw;
+    }
+
+    &__content-wrapper {
+      li {
+        width: 420px;
+      }
+    }
+  }
+
+  @include respond-to($LapTop) {
+    &__content-wrapper {
+      li {
+        width: 350px;
+      }
+    }
+  }
+
+  @include respond-to($l-desktop) {
+    &__content-wrapper {
+      li {
+        width: 300px;
+      }
+    }
+
+    &__subtitle {
+      font-size: 18px;
+      line-height: 19px;
+    }
+
+    &__number {
+      margin-bottom: 14px;
+      font-size: 44px;
+      line-height: 50px;
+    }
+
+    &__text {
+      max-width: 180px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &__btn {
+      max-width: 380px;
+      margin-left: 6vw;
+      font-size: 13px;
+      letter-spacing: 5px;
+    }
+
+    &__item:not(:last-child)::after {
+      height: 190px;
+    }
+  }
+
+  @include respond-to($m-desktop) {
+    &__content-wrapper {
+      li {
+        width: 270px;
+      }
+    }
+  }
+
+  @include respond-to($xl-tablet) {
+    height: auto;
+
+    &__contact-form {
+      display: none;
+    }
+
+    &__inner {
+      top: 0;
+      left: 7%;
+      margin-top: 0;
+      padding-top: 16%;
+      padding-bottom: 2%;
+    }
+
+    &__btn {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    &__form {
+      display: none;
+    }
+  }
 }
 
-// .slide-two__form {
-//   display: none;
-// }
+@include respond-to($tablet) {
+  .slide-two {
+    // &__bg {
+    //   display: none;
+    // }
+
+    &__inner {
+      display: none;
+    }
+
+    &__form {
+      display: none;
+    }
+  }
+}
