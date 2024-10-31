@@ -1,4 +1,6 @@
 .about-popup {
+  @extend %position-rel;
+
   &__content {
     position: relative;
     height: 80vh;
@@ -95,20 +97,34 @@
       margin-left: 10px;
     }
   }
+}
 
-  @include respond-to($xl-LapTop) {
+@include respond-to($xl-LapTop) {
+  .about-popup {
     &__content::after {
       position: static;
     }
   }
+}
 
-  @include respond-to($LapTop) {
+@include respond-to($LapTop) {
+  .about-popup {
     &__logo-wrapper {
       display: none;
     }
   }
+}
 
-  @include respond-to($m-tablet) {
+@include respond-to($xl-tablet) {
+  .about-popup {
+    &__context-wrapper {
+      margin-top: 50px;
+    }
+  }
+}
+
+@include respond-to($m-tablet) {
+  .about-popup {
     &__content {
       padding: 15px;
     }

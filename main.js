@@ -1,3 +1,4 @@
+import { addServicesToList } from '/src/js/pages/slide-three/services'
 // import { contactFormValidator, initFullPage } from '/src/js/modules/fullpageModule'
 import { initFullPage } from '/src/js/modules/fullpageModule'
 import { orderCallValidator } from '/src/js/libs/validator'
@@ -8,4 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
   orderCallValidator()
   // contactFormValidator()
   initFullPage()
+  addServicesToList('service-list')
+  addServicesToList('vip-service-list')
+  addServicesToList('extra-service-list')
 })

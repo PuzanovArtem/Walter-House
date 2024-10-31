@@ -57,6 +57,7 @@ export default defineConfig({
         resolve(__dirname, 'src/html/popup'),
         resolve(__dirname, 'src/html/pages/slide-one'),
         resolve(__dirname, 'src/html/pages/slide-two'),
+        resolve(__dirname, 'src/html/pages/slide-three'),
       ],
     }),
   ],

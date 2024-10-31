@@ -45,3 +45,7 @@
 <svg class="icon icon--facebook">
   <use xlink:href="/assets/sprites/sprite.svg#facebook"></use>
 </svg>
+
+<svg class="icon">
+  <use xlink:href="/assets/sprites/sprite.svg#close"></use>
+</svg>
