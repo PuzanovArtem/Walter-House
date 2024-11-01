@@ -173,9 +173,6 @@
   }
 
   &__info {
-    // position: fixed;
-    // bottom: 0;
-    // width: 145vh;
     max-width: 1564px;
     margin-top: 20px;
     padding: 54px 60px 42px 54px;
@@ -186,29 +183,6 @@
       padding: 36px 32px;
     }
   }
-
-  // &__info {
-  //   position: fixed;
-  //   bottom: 0;
-  //   left: 50%;
-  //   width: 100%;
-  //   max-width: 1564px;
-  //   padding: 54px 60px 42px 54px;
-  //   box-sizing: border-box;
-  //   color: #000;
-  //   background-color: var(--white-color);
-  //   transform: translateX(-50%);
-
-  //   @include respond-to(1024px) {
-  //     max-width: 100%;
-  //     padding: 36px 32px;
-  //   }
-
-  //   @include respond-to(768px) {
-  //     max-width: 100%;
-  //     padding: 24px 16px;
-  //   }
-  // }
 
   &__info-wrapper {
     @extend %display-jc-sb;
@@ -415,10 +389,6 @@
     &__info-arrow {
       margin-top: 19px;
     }
-
-    // &__info {
-    //   padding: 36px 32px;
-    // }
 
     &__info-wrapper::after {
       top: 89px;

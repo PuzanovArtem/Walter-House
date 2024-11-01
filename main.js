@@ -2,7 +2,6 @@ import { addServicesToList } from '/src/js/pages/slide-three/services'
 // import { contactFormValidator, initFullPage } from '/src/js/modules/fullpageModule'
 import { initFullPage } from '/src/js/modules/fullpageModule'
 // import { initializeModals } from '/src/js/modules/close'
-import '/src/js/modules/close'
 import { orderCallValidator } from '/src/js/libs/validator'
 import { setupModals } from '/src/js/modules/popup'
 

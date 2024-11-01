@@ -83,7 +83,6 @@
   display: none !important;
 }
 
-
 @include respond-to($xl-tablet) {
   .fp-is-overflow .fp-overflow.fp-auto-height-responsive,
   .fp-is-overflow .fp-overflow.fp-auto-height,

@@ -1,0 +1,42 @@
+.gallery-modal {
+  z-index: 4;
+
+  &__content {
+    @extend %position-rel;
+    z-index: 3;
+    width: 100%;
+    max-width: 1920px;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: transparent;
+  }
+
+  &__tab-btn {
+    display: none;
+  }
+
+  &__btn {
+    @extend %position-abs;
+    @extend %display-flex;
+    top: 160px;
+    right: 178px;
+    z-index: 4;
+    letter-spacing: 3px;
+    color: var(--white-color);
+    transition: transform 1s ease;
+
+    img {
+      margin-left: 30px;
+    }
+  }
+
+  &__btn:hover {
+    color: var(--yellow-gold-color) !important;
+    transform: translateX(10px);
+  }
+
+  &__point-wrapper {
+    position: absolute;
+    z-index: 6;
+  }
+}

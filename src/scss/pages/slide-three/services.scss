@@ -139,11 +139,6 @@
   }
 
   @include respond-to($m-mobile) {
-    // &__item {
-    //     max-width: 395px;
-    //     gap: 20px;
-    // }
-
     &__list {
       grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
     }
