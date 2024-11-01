@@ -117,3 +117,14 @@
     }
   }
 }
+
+.close {
+  cursor: pointer;
+  float: right;
+
+  &:hover,
+  &:focus {
+    color: black;
+    text-decoration: none;
+  }
+}

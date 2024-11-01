@@ -25,7 +25,8 @@
 
     li {
       @extend %position-rel;
-      width: 520px;
+      width: 650px;
+      // width: 520px;
       text-align: center;
     }
   }
@@ -65,7 +66,7 @@
     @extend %display-flex;
     max-width: 430px;
     margin-top: 21.5vw;
-    margin-left: 11.5vw;
+    margin-left: 11.1vw;
     font-size: 14px;
     line-height: 19px;
     letter-spacing: 7px;
@@ -81,6 +82,30 @@
 
   &__btn:hover {
     transform: translateX(10px);
+  }
+
+  @include respond-to(2125px) {
+    &__content-wrapper {
+      li {
+        width: 570px;
+      }
+    }
+  }
+
+  @include respond-to(1920px) {
+    &__content-wrapper {
+      li {
+        width: 520px;
+      }
+    }
+  }
+
+  @include respond-to($LapTop) {
+    &__content-wrapper {
+      li {
+        width: 350px;
+      }
+    }
   }
 
   @include respond-to($xl-LapTop) {
@@ -174,11 +199,13 @@
   }
 }
 
-@include respond-to($tablet) {
+@include respond-to($xl-tablet) {
   .slide-two {
-    // &__bg {
-    //   display: none;
-    // }
+    display: none;
+
+    &__bg {
+      display: none;
+    }
 
     &__inner {
       display: none;
@@ -187,5 +214,9 @@
     &__form {
       display: none;
     }
+  }
+
+  .slide__bg-overlay--hide {
+    display: none;
   }
 }
