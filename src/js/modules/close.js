@@ -1,39 +1,30 @@
-// export function initializeModals() {
-//   document.addEventListener('DOMContentLoaded', function () {
-//     const openModalButtons = document.querySelectorAll('.openModalBtnSix')
-//     const modals = document.querySelectorAll('.popUp-tab-sixth-screen__modal')
+// modal.js
+export function initializeModal() {
+  // Получаем модальное окно
+  const modal = document.getElementById('myModal')
 
-//     openModalButtons.forEach(button => {
-//       button.addEventListener('click', function () {
-//         const modalId = button.getAttribute('data-modal-target')
-//         const modal = document.getElementById(modalId)
+  // Получаем кнопку, которая открывает модальное окно
+  const openModalBtn = document.querySelector('.openModalBtn')
 
-//         if (modal) {
-//           modal.classList.add('active')
-//         }
-//       })
-//     })
+  // Получаем все элементы с классом close, которые закрывают модальное окно
+  const closeButtons = document.querySelectorAll('.close')
 
-//     modals.forEach(modal => {
-//       const closeModalButton = modal.querySelector('.e-service__close')
+  // Когда пользователь нажимает на кнопку, открываем модальное окно
+  openModalBtn.onclick = function () {
+    modal.style.display = 'block'
+  }
 
-//       if (closeModalButton) {
-//         closeModalButton.addEventListener('click', function () {
-//           modal.classList.remove('active')
-//         })
-//       }
-//     })
-//   })
-// }
+  // Добавляем обработчик события для всех кнопок закрытия
+  closeButtons.forEach(closeButton => {
+    closeButton.onclick = function () {
+      modal.style.display = 'none'
+    }
+  })
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   // Select the modal and close button elements
-//   const modal = document.getElementById('extraServices')
-//   const closeButton = document.querySelector('.e-service__close')
-
-//   // Add an event listener to the close button
-//   closeButton.addEventListener('click', function () {
-//     // Hide the modal by adding a 'hidden' class or setting display to 'none'
-//     modal.style.display = 'none'
-//   })
-// })
+  // Также можно закрывать модальное окно, когда пользователь кликает вне окна
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = 'none'
+    }
+  }
+}

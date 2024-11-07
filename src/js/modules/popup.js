@@ -9,9 +9,7 @@ export function setupModals() {
       modal.style.display = 'block'
       document.body.classList.add('modal-open')
       $.scrollify.disable()
-      links.forEach(link => {
-        link.classList.add('disabled')
-      })
+      links.forEach(link => link.classList.add('disabled'))
     }
   }
 
@@ -20,9 +18,7 @@ export function setupModals() {
       modal.style.display = 'none'
       document.body.classList.remove('modal-open')
       $.scrollify.enable()
-      links.forEach(link => {
-        link.classList.remove('disabled')
-      })
+      links.forEach(link => link.classList.remove('disabled'))
     }
   }
 
@@ -35,9 +31,7 @@ export function setupModals() {
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape') {
       const openModals = document.querySelectorAll(".main-popup[style='display: block;']")
-      openModals.forEach(openModal => {
-        closeModal(openModal)
-      })
+      openModals.forEach(openModal => closeModal(openModal))
     }
   })
 
@@ -90,13 +84,13 @@ export function setupModals() {
 
   if (backToHomeButton) {
     backToHomeButton.addEventListener('click', () => {
-      console.log('Back to home button clicked')
+      console.error('Back to home button clicked')
       const modal = backToHomeButton.closest('.main-popup')
       if (modal) {
         closeModal(modal)
-        console.log('Modal closed')
+        console.error('Modal closed')
       } else {
-        console.log('No modal found to close')
+        console.error('No modal found to close')
       }
     })
   }
