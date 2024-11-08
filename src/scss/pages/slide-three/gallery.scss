@@ -2,7 +2,7 @@
   z-index: 4;
 
   &__content {
-    position: relative;
+    @extend %position-rel;
     z-index: 3;
     width: 100%;
     height: 100vh;
@@ -15,12 +15,11 @@
   }
 
   &__btn {
-    position: absolute;
+    @extend %position-abs;
+    @extend %display-flex;
     top: 160px;
     right: 178px;
-    align-items: center;
     z-index: 4;
-    display: flex;
     font-size: 16px;
     letter-spacing: 3px;
     font-weight: 600;
@@ -38,7 +37,7 @@
   }
 
   &__point-wrapper {
-    position: absolute;
+    @extend %position-abs;
     z-index: 6;
   }
 
@@ -64,8 +63,8 @@
   }
 
   &__point {
+    @extend %position-rel;
     cursor: pointer;
-    position: relative;
     width: 14px;
     height: 14px;
     border-radius: 50%;
@@ -73,8 +72,8 @@
   }
 
   &__point::before {
+    @extend %position-abs;
     content: '';
-    position: absolute;
     top: 50%;
     left: 50%;
     width: 30px;
@@ -85,8 +84,8 @@
   }
 
   &__point::after {
+    @extend %position-abs;
     content: '';
-    position: absolute;
     top: 50%;
     left: 50%;
     width: 46px;
@@ -97,16 +96,16 @@
   }
 
   &__small-point-wrapper {
+    @extend %position-abs;
     opacity: 0;
-    position: absolute;
     top: -40px;
     left: 220px;
     transition: opacity 0.5s ease;
   }
 
   &__point-text {
+    @extend %position-abs;
     opacity: 0;
-    position: absolute;
     top: -110px;
     left: 90px;
     width: 170px;
@@ -117,7 +116,7 @@
   }
 
   &__small-point {
-    position: relative;
+    @extend %position-rel;
     width: 9px;
     height: 9px;
     border-radius: 50%;
@@ -125,8 +124,8 @@
   }
 
   &__small-point::after {
+    @extend %position-abs;
     content: '';
-    position: absolute;
     top: 50%;
     right: 8px;
     width: 140px;
@@ -135,8 +134,8 @@
   }
 
   &__small-point::before {
+    @extend %position-abs;
     content: '';
-    position: absolute;
     top: 24px;
     right: 143px;
     width: 80px;
@@ -146,7 +145,7 @@
   }
 
   &__img {
-    position: absolute;
+    @extend %position-abs;
     top: 0;
     left: 0;
     width: 100%;
@@ -155,12 +154,12 @@
   }
 
   &__swiper-slide {
-    position: relative;
+    @extend %position-rel;
   }
 
   &__swiper-slide::after {
+    @extend %position-abs;
     content: '';
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -177,9 +176,7 @@
   }
 
   .swiper-slide {
-    align-items: center;
-    justify-content: center;
-    display: flex;
+    @extend %display-center;
     flex-direction: column;
     width: 100%;
     min-height: 100vh;
@@ -189,7 +186,7 @@
   }
 
   &__pagination-wrapper {
-    position: absolute;
+    @extend %position-abs;
     bottom: 8%;
     left: 14.5%;
     width: 72vh;
@@ -216,9 +213,9 @@
   }
 
   &__swiper-button-prev::before {
+    @extend %position-abs;
     content: '';
     opacity: 0.3;
-    position: absolute;
     top: 50%;
     left: 400%;
     width: 260px;
@@ -234,9 +231,9 @@
   }
 
   &__swiper-button-next::before {
+    @extend %position-abs;
     content: '';
     opacity: 0.3;
-    position: absolute;
     top: 50%;
     left: -500%;
     width: 260px;
@@ -382,16 +379,16 @@
 }
 
 .swiper-custom-pagination {
-  position: relative;
+  @extend %position-rel;
   align-items: center;
   justify-content: center;
   display: flex;
   margin-top: 20px;
 
   &::after {
+    @extend %position-abs;
     content: '';
     opacity: 0.4;
-    position: absolute;
     top: 20px;
     left: 34%;
     z-index: 5;
@@ -423,7 +420,7 @@
 }
 
 .swiper-custom-pagination .swiper-pagination-current {
-  position: absolute;
+  @extend %position-abs;
   top: -38px;
   right: 43.5%;
   z-index: 5;
@@ -442,7 +439,7 @@
 }
 
 .swiper-custom-pagination .swiper-pagination-total {
-  position: absolute;
+  @extend %position-abs;
   top: 36px;
   left: 39.5%;
   z-index: 5;
@@ -461,11 +458,11 @@
 }
 
 .current-slide {
-  color: #ffa500; /* Цвет для текущего слайда */
+  color: var(--yellow-gold-color); /* Цвет для текущего слайда */
 }
 
 .total-slides {
-  color: #fff; /* Цвет для общего количества слайдов */
+  color: var(--white-color); /* Цвет для общего количества слайдов */
 }
 
 .swiper-button-next,
@@ -505,7 +502,7 @@
 }
 
 .gallery-modal__point-wrapper {
-  position: absolute;
+  @extend %position-abs;
 
   &--first {
     top: 39.5%;

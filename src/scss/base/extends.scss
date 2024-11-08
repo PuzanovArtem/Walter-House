@@ -43,6 +43,6 @@
 }
 
 %position-fix {
-  //  @extend %position-abs;
+  //  @extend %position-fix;
   position: fixed;
 }

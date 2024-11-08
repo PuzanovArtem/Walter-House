@@ -176,7 +176,7 @@
     max-width: 1564px;
     margin-top: 20px;
     padding: 54px 60px 42px 54px;
-    color: #000;
+    color: var(--black-color);
     background-color: var(--white-color);
 
     @include respond-to($m-tablet) {
@@ -196,7 +196,7 @@
     top: 89px;
     width: 100%;
     height: 1px;
-    background: #000;
+    background: var(--black-color);
   }
 
   &__info-text {
@@ -220,8 +220,7 @@
   }
 
   &__info-item {
-    align-items: center;
-    display: flex;
+    @extend %display-flex;
 
     a:hover {
       color: var(-yellow-gold-color);

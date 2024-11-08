@@ -12,7 +12,7 @@
   }
 
   &__content {
-    position: relative;
+    @extend %position-rel;
     justify-content: start;
     max-width: 1370px;
     margin: 3% auto;
@@ -21,8 +21,8 @@
   }
 
   &__close {
+    @extend %position-abs;
     cursor: pointer;
-    position: absolute;
     top: 0;
     right: 5px;
     width: 33px;
@@ -35,20 +35,20 @@
   }
 
   &__title-wrapper {
-    position: absolute;
+    @extend %position-abs;
     top: 74%;
     left: -16%;
     transform: translate(-50%, -50%);
   }
 
   &__title {
-    position: relative;
+    @extend %position-rel;
     color: var(--yellow-gold-color);
   }
 
   &__title::after {
+    @extend %position-abs;
     content: '';
-    position: absolute;
     top: 53%;
     left: 100%;
     width: 90px;
@@ -61,7 +61,7 @@
   }
 
   &__subtitle {
-    position: relative;
+    @extend %position-rel;
     padding-bottom: 20px;
     font-size: 24px;
     line-height: 28px;
@@ -69,9 +69,9 @@
   }
 
   &__subtitle::after {
+    @extend %position-abs;
     content: '';
     opacity: 0.2;
-    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -88,8 +88,7 @@
   }
 
   &__item {
-    align-items: center;
-    display: flex;
+    @extend %display-flex;
     gap: 40px;
     font-size: 16px;
     line-height: 20px;

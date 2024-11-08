@@ -79,29 +79,6 @@
     }
   }
 
-  // @include respond-to($m-tablet) {
-  //   .slide-one {
-  //     &__inner {
-  //       margin-top: 40%;
-  //       margin-left: 2%;
-  //       padding-bottom: 50px;
-  //     }
-
-  //     &__title {
-  //       font-size: 10vw;
-  //     }
-
-  //     &__title--s {
-  //       margin-left: 27vw;
-  //     }
-
-  //     &__subtitle {
-  //       font-size: 8px;
-  //       letter-spacing: 6px;
-  //     }
-  //   }
-  // }
-
   @include respond-to($s-tablet) {
     .slide-one {
       &__inner {

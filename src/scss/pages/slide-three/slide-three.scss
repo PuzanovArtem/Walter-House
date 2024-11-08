@@ -26,9 +26,9 @@
   }
 
   &__photo {
+    @extend %position-rel;
     overflow: hidden;
     cursor: pointer;
-    position: relative;
     width: 50%;
     width: 75vh;
     height: 100vh;
@@ -36,8 +36,8 @@
   }
 
   &__photo::before {
+    @extend %position-abs;
     content: '';
-    position: absolute;
     top: 0;
     right: 0;
     z-index: 5;
@@ -53,8 +53,8 @@
   }
 
   &__photo::after {
+    @extend %position-abs;
     content: '';
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -63,7 +63,7 @@
   }
 
   &__full-image {
-    position: absolute;
+    @extend %position-abs;
     top: 0;
     left: 0;
     width: 100%;
@@ -83,13 +83,13 @@
     width: 80%;
 
     .slide-three__title {
-      position: relative;
+      @extend %position-rel;
       color: var(--yellow-gold-color);
     }
 
     .slide-three__title::after {
+      @extend %position-abs;
       content: '';
-      position: absolute;
       top: 50%;
       left: 100%;
       width: 87px;
@@ -108,7 +108,7 @@
   }
 
   &__content-wrapper {
-    position: absolute;
+    @extend %position-abs;
     top: 50%;
     left: 50%;
     align-items: center;
