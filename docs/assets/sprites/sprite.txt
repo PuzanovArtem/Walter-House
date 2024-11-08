@@ -1,0 +1,51 @@
+<svg class="icon icon--menu-btn">
+  <use xlink:href="/assets/sprites/sprite.svg#menu-btn"></use>
+</svg>
+
+<svg class="icon icon--phone">
+  <use xlink:href="/assets/sprites/sprite.svg#phone"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="/assets/sprites/sprite.svg#click"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="/assets/sprites/sprite.svg#email"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="/assets/sprites/sprite.svg#map-pin"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="/assets/sprites/sprite.svg#phone-info"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="/assets/sprites/sprite.svg#arrow-longer"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="/assets/sprites/sprite.svg#arrow"></use>
+</svg>
+
+<svg class="icon icon-youtube">
+  <use xlink:href="/assets/sprites/sprite.svg#youtube"></use>
+</svg>
+
+<svg class="icon icon--telegram">
+  <use xlink:href="/assets/sprites/sprite.svg#telegram"></use>
+</svg>
+
+<svg class="icon icon--instagram">
+  <use xlink:href="/assets/sprites/sprite.svg#instagram"></use>
+</svg>
+
+<svg class="icon icon--facebook">
+  <use xlink:href="/assets/sprites/sprite.svg#facebook"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="/assets/sprites/sprite.svg#close"></use>
+</svg>
