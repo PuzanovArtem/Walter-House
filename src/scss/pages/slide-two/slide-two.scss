@@ -1,8 +1,6 @@
 .slide-two {
   &__inner {
-    left: 11.5%;
     margin: 153px 0 0;
-    margin-left: 0;
     padding-bottom: 0;
   }
 
@@ -108,7 +106,7 @@
 
   @include respond-to($xl-LapTop) {
     &__btn {
-      margin-top: 11vw;
+      margin-top: 21vw;
       margin-left: 15vw;
     }
 
@@ -153,7 +151,7 @@
 
     &__btn {
       max-width: 380px;
-      margin-left: 6vw;
+      margin-left: 13vw;
       font-size: 13px;
       letter-spacing: 5px;
     }

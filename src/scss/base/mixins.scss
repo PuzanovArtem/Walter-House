@@ -21,3 +21,28 @@ $xxl-LapTop: 1800px;
 
 ///////приклад використання
 /// @include respond-to($xxl-LapTop) { }
+
+
+// Константы для точек по высоте экрана
+$small-height: 480px;
+$medium-height: 600px;
+$large-height: 768px;
+$xl-height: 900px;
+$xxl-height: 1080px;
+$max-height: 1200px;
+
+// Миксин для адаптации по высоте экрана
+@mixin respond-to-height($breakpoint) {
+  @media only screen and (max-height: $breakpoint) {
+    @content;
+  }
+}
+
+// Пример использования
+
+// @include respond-to-height($xl-height) {
+//   .header {
+//     font-size: 1.5rem;
+//     padding: 10px;
+//   }
+// }
