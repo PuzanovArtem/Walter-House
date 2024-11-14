@@ -27,9 +27,9 @@ $xxl-LapTop: 1800px;
 $small-height: 480px;
 $medium-height: 600px;
 $large-height: 768px;
-$xl-height: 900px;
+$xl-height: 935px;
 $xxl-height: 1080px;
-$max-height: 1200px;
+$max-height: 1440px;
 
 // Миксин для адаптации по высоте экрана
 @mixin respond-to-height($breakpoint) {

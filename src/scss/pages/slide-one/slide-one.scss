@@ -45,12 +45,42 @@
         margin-left: 12vw;
       }
     }
+
+    @include respond-to-height($xl-height) {
+      .slide-one {
+        &__inner {
+          z-index: 3;
+          margin-top: 19.1%;
+          margin-left: 16%;
+        }
+      }
+    }
+
+    @include respond-to-height($large-height) {
+      .slide-one {
+        &__inner {
+          z-index: 3;
+          margin-top: 12.5%;
+          margin-left: 10%;
+        }
+      }
+    }
   }
 
   @include respond-to($m-desktop) {
     .slide-one {
       &__inner {
         margin-left: 12.5%;
+      }
+    }
+
+    @include respond-to-height($max-height){
+      .slide-one {
+        &__inner {
+          z-index: 3;
+          margin-top: 37.5%;
+          margin-left: 14%;
+        }
       }
     }
   }

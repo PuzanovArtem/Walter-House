@@ -104,3 +104,11 @@
     /* min-height: calc(var(--vh, 1vh)* 100); */
   }
 }
+
+
+@include respond-to-height($xl-height){
+  .pagination {
+    top: 20%;
+    right: 1%;
+  }
+}

@@ -5,8 +5,8 @@
     bottom: 0;
     z-index: 5;
     width: 60vw;
-    max-width: 740px;
-    padding: 80px 120px 89px;
+    max-width: 700px;
+    padding: 40px;
     background: var(--white-color);
   }
 
@@ -33,17 +33,41 @@
   @include respond-to($xl-LapTop) {
     &__contact-form {
       width: 45vw;
+      min-width: 520px;
       height: 20vw;
+      min-height: 245px;
       padding: 2vw 3vw;
-      // width: 33vw;
-      // height: 15vw;
-      // padding: 1vw 2vw;
     }
 
     &__input {
       margin-bottom: 1vw;
       padding: 1vw 1vw 1vw 0;
       font-size: 1.4vw;
+    }
+
+    @include respond-to-height($xxl-height) {
+      &__contact-form {
+        width: 35vw;
+        height: 15vw;
+        padding: 2vw;
+      }
+    }
+
+    @include respond-to-height($xl-height) {
+      &__contact-form {
+        width: 35vw;
+        height: 17vw;
+        padding: 2vw;
+      }
+    }
+
+    @include respond-to-height($large-height) {
+      &__contact-form {
+        width: 30vw;
+        height: 15vw;
+        min-height: 200px;
+        padding: 1vw 2vw;
+      }
     }
   }
 
