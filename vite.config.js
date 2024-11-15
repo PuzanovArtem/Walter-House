@@ -59,6 +59,7 @@ export default defineConfig({
         resolve(__dirname, 'src/html/pages/slide-two'),
         resolve(__dirname, 'src/html/pages/slide-three'),
         resolve(__dirname, 'src/html/pages/slide-four'),
+        resolve(__dirname, 'src/html/pages/slide-fifth'),
       ],
     }),
   ],

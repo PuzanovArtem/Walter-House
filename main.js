@@ -4,6 +4,7 @@ import { initClickHandlers } from '/src/js/pages/slide-four/click-handlers'
 import { initFullPage } from '/src/js/modules/fullpageModule'
 import { initHoverHandlers } from '/src/js/pages/slide-four/hover-handlers'
 import { orderCallValidator } from '/src/js/libs/validator'
+import { setupFifthScreenInteractions } from '/src/js/pages/slide-fifth/slide-fifth'
 import { setupModals } from '/src/js/modules/popup'
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -17,4 +18,5 @@ document.addEventListener('DOMContentLoaded', function () {
   gallerySlider()
   initHoverHandlers()
   initClickHandlers()
+  setupFifthScreenInteractions()
 })
