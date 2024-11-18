@@ -363,6 +363,12 @@
         margin-top: 2vh;
         font-size: 1.2vw;
       }
+      
+      &__info-elite,
+      &__info-vip,
+      &__info-extra {
+        display: none;
+      }
     }
   }
 
