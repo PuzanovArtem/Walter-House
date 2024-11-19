@@ -6,35 +6,33 @@ export function initializeSixthScreenInteractions() {
     const list = document.querySelector('.slide-six__list')
     const infoBlocks = document.querySelectorAll('.slide-six__info')
 
-    // Обработка кнопки "Показать больше"
     if (showMoreButton) {
       showMoreButton.addEventListener('click', function () {
         if (hiddenItems.length > 0) {
           hiddenItems.forEach(item => {
-            item.style.display = 'block' // Показывает скрытые элементы
+            item.style.display = 'block'
           })
           if (contactForm) {
-            contactForm.style.bottom = '0' // Устанавливает контактную форму внизу экрана
+            contactForm.style.bottom = '0'
           }
           if (list) {
-            list.style.marginBottom = '0' // Убирает нижний отступ у списка
+            list.style.marginBottom = '0'
           }
-          showMoreButton.style.display = 'none' // Скрывает кнопку
+          showMoreButton.style.display = 'none'
         }
       })
     }
 
-    // Обработка наведения на элементы и отображения блоков информации
     hiddenItems.forEach((item, index) => {
       item.addEventListener('mouseenter', () => {
         if (infoBlocks[index]) {
-          infoBlocks[index].style.display = 'block' // Показывает соответствующий блок информации
+          infoBlocks[index].style.display = 'block'
         }
       })
 
       item.addEventListener('mouseleave', () => {
         if (infoBlocks[index]) {
-          infoBlocks[index].style.display = 'none' // Скрывает блок информации
+          infoBlocks[index].style.display = 'none'
         }
       })
     })
