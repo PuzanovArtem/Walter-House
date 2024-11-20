@@ -23,28 +23,28 @@ document.addEventListener('DOMContentLoaded', function () {
   initializeSixthScreenInteractions()
 })
 
-document.addEventListener('DOMContentLoaded', function () {
-  const openModalButtons = document.querySelectorAll('.openModalBtnSix')
-  const modals = document.querySelectorAll('.popUp-tab-slide-six__modal')
+// document.addEventListener('DOMContentLoaded', function () {
+//   const openModalButtons = document.querySelectorAll('.openModalBtnSix')
+//   const modals = document.querySelectorAll('.popUp-tab-slide-six__modal')
 
-  openModalButtons.forEach(button => {
-    button.addEventListener('click', function () {
-      const modalId = button.getAttribute('data-modal-target')
-      const modal = document.getElementById(modalId)
+//   openModalButtons.forEach(button => {
+//     button.addEventListener('click', function () {
+//       const modalId = button.getAttribute('data-modal-target')
+//       const modal = document.getElementById(modalId)
 
-      if (modal) {
-        modal.classList.add('active')
-      }
-    })
-  })
+//       if (modal) {
+//         modal.classList.add('active')
+//       }
+//     })
+//   })
 
-  modals.forEach(modal => {
-    const closeModalButton = modal.querySelector('.e-service__close')
+//   modals.forEach(modal => {
+//     const closeModalButton = modal.querySelector('.e-service__close')
 
-    if (closeModalButton) {
-      closeModalButton.addEventListener('click', function () {
-        modal.classList.remove('active')
-      })
-    }
-  })
-})
+//     if (closeModalButton) {
+//       closeModalButton.addEventListener('click', function () {
+//         modal.classList.remove('active')
+//       })
+//     }
+//   })
+// })

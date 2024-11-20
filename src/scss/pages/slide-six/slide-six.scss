@@ -9,9 +9,9 @@
   //   display: none;
   // }
 
-  &__container{
+  &__container {
     padding: 0;
-    }
+  }
 
   &__list {
     overflow: hidden;
@@ -84,9 +84,9 @@
 
   &__inner {
     top: 0;
-    height: 100vh;
+    height: 100%;
+    margin-top: 0;
     margin-left: 9.5%;
-	margin-top: 0;
   }
 
   &__item {
@@ -206,7 +206,7 @@
     }
 
     &__inner {
-      margin : 62px 0;
+      margin: 62px 0 0;
     }
 
     &__text {
@@ -275,7 +275,6 @@
 
     &__contact-form-s {
       display: block;
-      margin-top: 186px;
     }
   }
 
@@ -284,6 +283,10 @@
       position: relative;
       display: block;
       margin-bottom: -310px;
+    }
+
+    &__inner {
+      padding: 0 0 199px;
     }
 
     &__contact-form-s {
@@ -383,6 +386,14 @@
       margin-bottom: -220px;
     }
   }
+
+  @include respond-to(341px){
+    &__inner{
+      margin: 31px 0 0; 
+      padding: 0 0 222px;
+    }
+  }
+
 }
 
 .popUp-tab-slide-six {
