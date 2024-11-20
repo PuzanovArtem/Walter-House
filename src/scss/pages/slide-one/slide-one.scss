@@ -108,9 +108,9 @@
       &__inner {
         top: 0;
         display: block;
-        margin-top: 36%;
+        margin-top: 30%;
         margin-left: 5%;
-        padding-bottom: 140px;
+        padding-bottom: 130px;
       }
 
       &__title--s {
@@ -119,11 +119,18 @@
     }
   }
 
+  @include respond-to($m-tablet) {
+    .slide-one {
+      &__inner {
+        padding-bottom: 60px;
+      }
+    }
+  }
+
   @include respond-to($s-tablet) {
     .slide-one {
       &__inner {
-        margin-top: 48%;
-        padding-bottom: 30px;
+        margin-top: 35%;
       }
     }
   }
@@ -131,8 +138,8 @@
   @include respond-to($m-mobile) {
     .slide-one {
       &__inner {
-        margin-top: 45%;
-        padding-bottom: 100px;
+        margin-top: 35%;
+        padding-bottom: 90px;
       }
     }
   }
@@ -145,7 +152,7 @@
       }
 
       &__inner {
-        margin-top: 65%;
+        margin-top: 55%;
         margin-left: 0%;
         padding-bottom: 175px;
       }

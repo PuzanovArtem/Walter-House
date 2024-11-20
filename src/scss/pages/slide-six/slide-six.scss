@@ -4,10 +4,14 @@
     backdrop-filter: blur(20px);
   }
 
-  &__show-more-btn,
-  &__contact-form-s {
-    display: none;
-  }
+  // &__show-more-btn,
+  // &__contact-form-s {
+  //   display: none;
+  // }
+
+  &__container{
+    padding: 0;
+    }
 
   &__list {
     overflow: hidden;
@@ -202,8 +206,7 @@
     }
 
     &__inner {
-      margin-top: 0;
-      margin-left: 0;
+      margin : 62px 0;
     }
 
     &__text {
@@ -272,6 +275,7 @@
 
     &__contact-form-s {
       display: block;
+      margin-top: 186px;
     }
   }
 

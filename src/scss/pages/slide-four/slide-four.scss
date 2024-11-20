@@ -351,19 +351,20 @@
 
       &__total-number {
         top: 85px;
-        margin: 0px -569px;
+        margin: 0 -569px;
       }
 
       &__info-title {
-        padding-bottom: 2vh;
-        font-size: 2vw;
+        font-size: 2.5vw;
+        padding-bottom: 10px;
       }
 
       &__text {
-        margin-top: 2vh;
-        font-size: 1.2vw;
+        margin-top: 1.2vh;
+        font-size: 1.5vw;
+        line-height: 20px;
       }
-      
+
       &__info-elite,
       &__info-vip,
       &__info-extra {
@@ -402,8 +403,8 @@
       &__total-number {
         top: 80px;
         left: 50%;
-        margin: 0 auto;
         justify-content: center;
+        margin: 0 auto;
         transform: translate(-50%, -50%);
       }
 

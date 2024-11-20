@@ -75,8 +75,10 @@
     &__contact-form {
       position: static;
       width: 100%;
+      min-width: 320px;
       height: auto;
-      padding: 85px 120px 89px;
+      min-height: 175px;
+      padding: 25px 15px;
     }
 
     &__input {
@@ -87,10 +89,6 @@
   }
 
   @include respond-to($m-tablet) {
-    &__contact-form {
-      padding: 33px 41px 55px 42px;
-    }
-
     &__input {
       margin-bottom: 17px;
       padding: 24px 10px 22px 0;
