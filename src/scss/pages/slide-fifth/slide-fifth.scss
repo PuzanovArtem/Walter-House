@@ -264,6 +264,24 @@
     }
   }
 
+  @include respond-to($k-display) {
+    @include respond-to-height($xl-height) {
+      .slide-fifth {
+        &__inner {
+          margin-top: 12%;
+        }
+      }
+    }
+
+    @include respond-to-height($large-height) {
+      .slide-fifth {
+        &__inner {
+          margin-top: 9%;
+        }
+      }
+    }
+  }
+
   @include respond-to($xl-LapTop) {
     &__info-text {
       width: 241px;
@@ -283,6 +301,10 @@
       width: 180px;
       height: 180px;
       margin: auto;
+    }
+
+    .slide-fifth__form {
+      display: none;
     }
 
     &__main-point-first {

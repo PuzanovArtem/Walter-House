@@ -28,12 +28,12 @@
     z-index: 3;
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
     max-width: 1594px;
-    height: 86%;
+    height: 82.5%;
     margin: 10% auto 0;
-    padding: 15px;
-    padding-top: 150px;
+    // padding: 15px;
+    padding-top: 213px;
     background-color: transparent;
   }
 
@@ -174,7 +174,7 @@
 
   &__info {
     max-width: 1564px;
-    margin-top: 20px;
+    margin: 20px 0 0 15px;
     padding: 54px 60px 42px 54px;
     color: var(--black-color);
     background-color: var(--white-color);

@@ -370,6 +370,8 @@
       &__info-extra {
         display: none;
       }
+
+     
     }
   }
 
@@ -387,7 +389,7 @@
       }
 
       &__contact-form {
-        display: none;
+        display: none !important;
       }
 
       &__content-wrapper {
@@ -469,13 +471,13 @@
       }
 
       &__contact-form {
-        display: block;
+        display: block !important;
       }
 
       &__inner {
         margin: 0;
         padding-top: 60px;
-        padding-bottom: 50px;
+        padding-bottom: 40px;
       }
 
       &__circle-wrapper {

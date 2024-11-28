@@ -12,6 +12,7 @@ $l-desktop: 1290px;
 $LapTop: 1440px;
 $xl-LapTop: 1718px;
 $xxl-LapTop: 1800px;
+$k-display: 2560px;
 
 @mixin respond-to($breakpoint) {
   @media only screen and (max-width: $breakpoint) {
@@ -21,7 +22,6 @@ $xxl-LapTop: 1800px;
 
 ///////приклад використання
 /// @include respond-to($xxl-LapTop) { }
-
 
 // Константы для точек по высоте экрана
 $small-height: 480px;

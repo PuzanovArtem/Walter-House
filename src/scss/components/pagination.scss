@@ -85,6 +85,10 @@
   }
 }
 
+body:not(.fp-responsive) .fp-overflow {
+  max-height: 100% !important;
+}
+
 .fp-watermark {
   display: none !important;
 }
