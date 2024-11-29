@@ -8,32 +8,32 @@ export function initHoverHandlers() {
   const contactInfoExtra = document.querySelector('.slide-four__info-extra')
 
   styleItemElite.addEventListener('mouseover', function () {
-    contactForm.style.opacity = 0
+    contactForm.style.display = 'none'
     contactInfoElite.style.display = 'block'
   })
 
   styleItemElite.addEventListener('mouseout', function () {
-    contactForm.style.opacity = 1
+    contactForm.style.display = 'block'
     contactInfoElite.style.display = 'none'
   })
 
   styleItemVip.addEventListener('mouseover', function () {
-    contactForm.style.opacity = 0
+    contactForm.style.display = 'none'
     contactInfoVip.style.display = 'block'
   })
 
   styleItemVip.addEventListener('mouseout', function () {
-    contactForm.style.opacity = 1
+    contactForm.style.display = 'block'
     contactInfoVip.style.display = 'none'
   })
 
   styleItemExtra.addEventListener('mouseover', function () {
-    contactForm.style.opacity = 0
+    contactForm.style.display = 'none'
     contactInfoExtra.style.display = 'block'
   })
 
   styleItemExtra.addEventListener('mouseout', function () {
-    contactForm.style.opacity = 1
+    contactForm.style.display = 'block'
     contactInfoExtra.style.display = 'none'
   })
 }

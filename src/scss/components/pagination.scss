@@ -1,7 +1,7 @@
 .pagination {
   @extend %position-abs;
   top: 35%;
-  right: 5%;
+  right: 1%;
   z-index: 5;
   transform: translateX(-50%);
 
@@ -74,9 +74,19 @@
   height: 100vh;
   font-size: 2rem;
 
+  .fp-overflow {
+    width: 100% !important;
+    height: 100% !important;
+    // max-height: 100vh;
+  }
+
   @include respond-to($xl-tablet) {
     height: auto !important;
   }
+}
+
+body:not(.fp-responsive) .fp-overflow {
+  max-height: 100% !important;
 }
 
 .fp-watermark {
@@ -96,5 +106,13 @@
     min-height: auto !important;
     /* min-height: 100vh; */
     /* min-height: calc(var(--vh, 1vh)* 100); */
+  }
+}
+
+
+@include respond-to-height($xl-height){
+  .pagination {
+    top: 20%;
+    right: 1%;
   }
 }

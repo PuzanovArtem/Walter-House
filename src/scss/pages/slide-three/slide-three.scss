@@ -3,11 +3,6 @@
   height: 100vh;
   background: var(--gray-color);
 
-  .fp-overflow {
-    width: 100% !important;
-    max-height: 100vh;
-  }
-
   .fp-overflow:hover {
     width: 100% !important;
     max-height: 100vh;
@@ -260,7 +255,7 @@
 
     &__photo:hover {
       width: 100%;
-      height: 35vh;
+      height: 50vh;
 
       .slide-three__title::after {
         top: 140%;
